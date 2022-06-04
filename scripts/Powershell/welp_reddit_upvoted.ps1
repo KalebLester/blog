@@ -1,0 +1,1 @@
+python -m bdfr download --user me --upvoted --authenticate --no-dupes --search-existing --make-hard-links -v --config "C:\Users\kaleb\AppData\Local\BDFR\bdfr\WellWelp\wellwelp.cfg" --log "C:\Users\kaleb\AppData\Local\BDFR\bdfr\WellWelp\upvoted_log.txt" D:\Reddit\Welp

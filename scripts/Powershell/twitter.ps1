@@ -1,0 +1,1 @@
+gallery-dl --cookies "C:\Users\kaleb\Documents\scripts\Cookies\twitter.txt" -d "D:\" -f "{content[0:64]|filename:R /_/}.{extension}" --download-archive "D:\Twitter\downloaded_log.txt" --write-log "D:\Twitter\log\log.txt" --sleep 1.0-2.0 --mtime-from-date -v https://twitter.com/Tayphix/likes

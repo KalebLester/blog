@@ -1,0 +1,1 @@
+python -m bdfr download --user me --saved --authenticate --no-dupes --search-existing --make-hard-links -v --config "C:\Users\kaleb\AppData\Local\BDFR\bdfr\Tayphix\tayphix.cfg" --log "C:\Users\kaleb\AppData\Local\BDFR\bdfr\Tayphix\saved_log.txt" D:\Reddit\Tayphix

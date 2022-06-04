@@ -1,0 +1,2 @@
+cd /d D:
+yt-dlp -o "/Downloaded_Videos/ASMR/%%(channel)s_%%(title)s.%%(ext)s" -i --download-archive "/Downloaded_Videos/ASMR/downloaded_asmr_log.txt" -ciw -v --sponsorblock-remove sponsor,interaction,filler,selfpromo --sponsorblock-mark all --cookies-from-browser VIVALDI --embed-metadata --embed-subs --remux-video mkv --sub-langs all,-live_chat https://www.youtube.com/playlist?list=PLUWVREqZzU1FnxJ4E7k_3ODhWi8PFGCrH

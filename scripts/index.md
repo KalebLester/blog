@@ -1,4 +1,4 @@
-# Main Index
+# Automagic content downloading from Reddit, Twitter, and YouTube.
 
 [Gallery-DL](https://github.com/mikf/gallery-dl) is a command line utility that allows downloading from a multitude of websites. I am will be using it to download all my liked posts on Twitter.
 
