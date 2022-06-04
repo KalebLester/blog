@@ -1,37 +1,26 @@
-## Welcome to GitHub Pages
+# Automagic content downloading from Reddit, Twitter, and YouTube.
 
-You can use the [editor on GitHub](https://github.com/KalebLester/KalebLester/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+[Gallery-DL](https://github.com/mikf/gallery-dl) is a command line utility that allows downloading from a multitude of websites. I am will be using it to download all my liked posts on Twitter.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
+Script:
 ```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+gallery-dl 
+--cookies "C:\Users\{name}\Documents\scripts\Cookies\twitter.txt"
+-d "D:\"
+-f "{content[0:64]|filename:R /_/}.{extension}"
+--download-archive "D:\Twitter\downloaded_log.txt" 
+--write-log "D:\Twitter\log\log.txt" 
+--sleep 1.0-2.0 
+--mtime-from-date 
+-v
+https://twitter.com/{username}/likes
 ```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/KalebLester/KalebLester/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Copy friendly format:
+```
+gallery-dl --cookies "C:\Users\{name}\Documents\scripts\Cookies\twitter.txt" -d "D:\" -f "{content[0:64]|filename:R /_/}.{extension}" --download-archive "D:\Twitter\downloaded_log.txt" --write-log "D:\Twitter\log\log.txt" --sleep 1.0-2.0 --mtime-from-date -v https://twitter.com/{username}/likes
+```
+Each line represents a different command line argument.
+1. gallery-dl
+   - The name of the program
+3. --cookies "C:\Users\{name}\Documents\scripts\Cookies\twitter.txt"
+   - Tells the program where our browser cookies are so that the program can view your liked posts. The reason we have to use cookies instead of regular authentication (username + password) is because the goal of the script is to run automatically in the background. With regular authentication, I would have to input a 2fa code every time. You can obtain your cookies for a specific site via the extension [EditThisCookie](https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg) for Chrome. The location of the cookies file does not matter as long as the script has read access to it.
